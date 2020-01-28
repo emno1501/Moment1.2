@@ -1,0 +1,182 @@
+﻿html {
+    font-size: 62.5%;
+}
+body {
+    padding: 140px 5% 5% 5%;
+    margin: 0;
+    background-color: #F3F3F3;
+}
+header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 25px 0;
+    overflow: auto;
+    background-color: #99cde7;
+}
+.headerBackground {
+    background-color: rgba(153, 205, 231, 0.7);
+}
+.logo {
+    float: left;
+    margin-left: 5%;
+    width: 250px;
+    margin-top: 7px;
+}
+.daysDate {
+    float: right;
+    margin-right: 5%;
+    padding: 0 15px;
+    background-color: #99cde7;
+}
+.contentbox {
+    position: relative;
+    overflow: auto;
+}
+p, a, li {
+    font-family: Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6em;
+    color: black;
+}
+a:visited {
+    color: black;
+}
+h1, h2, h3 {
+    font-family: Verdana;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.4rem;
+}
+aside {
+    position: absolute;
+    width: 16%;
+    padding: 0 2%;
+    height: 100%;
+    background-color: #cfd6da;
+}
+nav ul {
+    width: 100%;
+    margin-top: 25px;
+    padding: 0;
+}
+nav li {
+    list-style: none;
+    margin-bottom: 20px;
+    background-color: #e4ebef;
+    text-align: center;
+    padding: 5px;
+}
+nav li:hover {
+    background-color: black;
+}
+nav li:hover a {
+    color: white;
+}
+.current {
+    background-color: black;
+}
+.current a {
+    color: white;
+}
+nav a {
+    text-decoration:  none;
+    padding: 5px 20%;
+}
+.container {
+    float: left;
+    width: 67%;
+    padding: 4%;
+    min-height: 400px;
+    margin-left: 25%;
+    background-color: white;
+}
+p .bold {
+    font-weight: bold;
+}
+#coursesh3 {
+    margin-top: 30px;
+}
+footer {
+    margin-top: 5%;
+    width: 100%;
+    background-color: #124f65;
+    padding: 10px 0;
+}
+footer p {
+    text-align: center;
+    color: white;
+}
+footer a {
+    color: white;
+}
+footer a:visited {
+    color: white;
+}
+footer a:hover {
+    text-decoration: none;
+}
+
+/* Mindre skärmar */
+@media screen and (max-width: 960px)
+{
+    aside {
+        float: none;
+        width: 92%;
+        padding: 15px 4%;
+        position: static;
+        margin-bottom: 30px;
+    }
+    nav ul {
+        margin: 0 auto;
+        max-width: 235px;
+    }
+    nav li {
+        display: inline;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    nav a {
+        padding: 0 10px;
+    }
+    .container {
+        float: none;
+        margin: 0;
+        width: 90%;
+        padding: 5%;
+    }
+    h1 {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 600px) {
+    body {
+        padding-top: 160px;
+    }
+    .daysDate {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    .logo {
+        float: none;
+        margin: 40px auto 0 auto;
+    }
+    .container {
+        width: 86%;
+        padding: 7%;
+    }
+}

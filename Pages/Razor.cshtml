@@ -1,0 +1,45 @@
+﻿@page
+@model Moment1._2.RazorModel
+@{
+    ViewData["Title"] = "Razor";
+    ViewData["currentRazor"] = "current";
+
+    var date = DateTime.Now.ToShortDateString();
+    var time = DateTime.Now.ToLongTimeString();
+
+    List<string> courseList = new List<string>();
+    courseList.Add("DT057G, Webbutveckling I");
+    courseList.Add("DT084G, Introduktion till programmering i JavaScfipt");
+    courseList.Add("DT163G, Digital bildbehandling för webb");
+    courseList.Add("GD008G, Typografi och form för webb");
+    courseList.Add("DT003G, Databaser");
+    courseList.Add("DT093G, Webbutveckling II");
+    courseList.Add("DT068G, Webbanvändbarhet");
+    courseList.Add("DT152G, Webbdesign för CMS");
+    courseList.Add("IK060G, Projektledning");
+    courseList.Add("DT173G, Webbutveckling III");
+    courseList.Add("DT162G, JavaScript-baserad webbutveckling");
+    courseList.Add("DT071G, Programmering i C#.NET");
+}
+
+    <div>
+        <h1>Razor</h1>
+        <h2>Information</h2>
+        <p><span class="bold">Datum/klockslag: </span>@date  @time</p>
+        @if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
+        {
+            <p>Idag är det måndag!</p>
+        }
+        else
+        {
+            <p>Idag är det inte måndag.</p>
+        }
+        <h3 id="coursesh3">Kurser jag läst</h3>
+        <ul>
+            @foreach (string course in courseList)
+            {
+                <li>@course</li>
+            }
+        </ul>
+    </div>
+

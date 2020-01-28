@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="se">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Moment1.2</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <header id="header">
+        <div class="logo"><a href="/"><img src="images/logo.svg" alt="logo" /></a></div>
+        <div class="daysDate">
+            <p>Dagens datum är: @DateTime.Now.ToShortDateString()</p>
+        </div>
+    </header>
+    <div class="contentbox">
+        <aside>
+            <nav>
+                <ul>
+                    <li class="@ViewData["currentStart"]"><a href="/">Start</a></li>
+                    <li class="@ViewData["currentRazor"]"><a href="/Razor">Razor</a></li>
+                    <li class="@ViewData["currentAbout"]"><a href="/About">Om Sidan</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="container">
+            <main role="main">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <footer>
+            <p>Av Emma Norgren - Kontakta mig via e-post: <a href="mailto:emno1501@student.miun.se">emno1501@student.miun.se</a></p>
+    </footer>
+
+
+    <script src="~/js/main.js"></script>
+</body>
+</html>
